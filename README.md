@@ -78,6 +78,8 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
 
 ## Usage
 
+The Android root view will be 'screenshotted' and rendered blurry in the <BlurryOverlay> view.
+
 ```js
 var BlurryOverlay = require('react-native-android-blurryoverlay');
 
