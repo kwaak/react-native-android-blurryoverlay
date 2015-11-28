@@ -13,7 +13,7 @@
   "license": "MIT",
   "peerDependencies": {
     "react-native": ">= 0.15.0"
-  }
+  },
   "keywords": [
     "react-component",
     "react-native",
