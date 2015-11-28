@@ -6,8 +6,17 @@
   "author": {
     "name": "Kwaak"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kwaak/react-native-android-blurryoverlay.git"
+  },
   "license": "MIT",
   "peerDependencies": {
     "react-native": ">= 0.15.0"
   }
+  "keywords": [
+    "react-component",
+    "react-native",
+    "android"
+  ],
 }
