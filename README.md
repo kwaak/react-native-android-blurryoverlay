@@ -1,5 +1,7 @@
 # Blurry overlay for react-native android
 
+[![npm](https://img.shields.io/npm/v/react-native-android-blurryoverlay.svg)](https://www.npmjs.com/package/react-native-android-blurryoverlay)
+
 # This is very experimental
 
 A react native android module to add a blurry overlay.
