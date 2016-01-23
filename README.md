@@ -6,6 +6,8 @@
 
 A react native android module to add a blurry overlay.
 
+![Example](Examples/Example.gif?raw=true "Example")
+
 ## Setup
 
 * install module
