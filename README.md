@@ -85,8 +85,82 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
 The Android root view will be 'screenshotted' and rendered blurry in the <BlurryOverlay> view.
 
 ```js
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ */
+'use strict';
+import React, {
+  AppRegistry,
+  Component,
+  StyleSheet,
+  Text,
+  View,
+  Image
+} from 'react-native';
+
 var BlurryOverlay = require('react-native-android-blurryoverlay');
 
-<BlurryOverlay radius={5} sampling={6} color="#00FFFF00" style={[{flex: 1, position: "absolute", left: 0, top: 0, bottom: 0, right: 0 }]}  />
+class BlurryTest extends Component {
+  constructor() {
+    super();
+    this.state = {
+      renderBlurry: false
+    }
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ renderBlurry: true })
+    });
+  }
+  render() {
+    var overlay = (this.state.renderBlurry) ? <BlurryOverlay 
+    radius={7} sampling={6} color="#00FFFF00"
+    style={[{ 
+      position: "absolute", 
+      left: 0, 
+      top: 0, 
+      bottom: 0, 
+      right: 0 
+    }]}  /> : <View />;
+    return (
+      <View style={styles.container}>
+        <Image
+          source={require('./bg.jpg')}
+        />
+        <Text style={styles.welcome}>
+          Welcome to React Native!
+        </Text>
+        <Text style={styles.instructions}>
+          To get started, edit index.android.js
+        </Text>
+        <Text style={styles.instructions}>
+          Shake or press menu button for dev menu
+        </Text>
+        {overlay}
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+});
+
+AppRegistry.registerComponent('BlurryTest', () => BlurryTest);
 
 ```
